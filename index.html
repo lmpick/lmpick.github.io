@@ -1,49 +1,76 @@
 <html>
 <head>
 <meta name=viewport content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap" rel="stylesheet">
 <title> Lauren Pick </title>
 <style>
-body
-  {
-  font-family: Tahoma, Verdana, Helvetica, sans-serif;
+body {
+  font-family: 'Nunito', Tahoma, Verdana, Helvetica, sans-serif;
   color: #333333;
   background-color: #f1f1f1;
+  background-size: cover;
+  background-attachment:fixed;
+  font-weight: lighter;
   padding:0px;
   margin: 0px;
+  font-size: 1.1em;
   border-top: 3px solid #0066bb;
 }
 a {
   text-decoration: none;
   color: #0066bb;
+  font-weight: normal;
 }
 a:hover{
   text-decoration: none;
   color: #cc00bb;
 }
 .header {
-        padding-top:1em;
-        color: #0066bb;
-        width: 70%;
-        float: top;
-        min-width: 400px;
+  color: #0066bb;
+  width: 75%;
+  min-width: 400px;
+  float: top;
+  margin-bottom: 2em;
+  padding-top: 2em;
+}
+.buttons {
+  padding-top:0.5em;
+  padding-bottom:0.5em;
+}
+.authors {
+  display:block;
+  margin-top:0.5em;
+}
+.conf {
+  display:block;
+  margin-top:0.5em;
 }
 .button {
-        padding: 0.2em;
-        border-radius: 5px;
-        background-color: #0066bb;
-        color: #ffffff;
-        font-size: 0.75em;
-        white-space: nowrap;
+  padding: 0.2em;
+  border-radius: 5px;
+  background-color: #0066bb;
+  color: #ffffff;
+  font-size: 0.75em;
+  white-space: nowrap;
 }
 .button:hover {
-        background-color: #cc00bb;
-        color: #ffffff;
+  background-color: #cc00bb;
+  color: #ffffff;
 }
 div {
-        margin: auto;
+  margin: auto;
 }
 ul {
-  list-style-position: inside;
+  list-style: none;
+}
+li {
+  border-left: 2px solid #0066bb;
+  padding:0em;
+  margin-left:-0.5em;
+  margin-top:0.5em;
+  padding-left:0.5em;
 }
 p {
   width:100%;
@@ -51,66 +78,170 @@ p {
   padding-top:0.5em;
 }
 h1 {
-        padding-top:0;
-        font-size:2em;
-        padding-bottom:0;
-        font-weight: normal;
+  padding-top:0;
+  font-size:2em;
+  padding-bottom:0;
+  font-weight: normal;
+  display:inline;
 }
 h2 {
-        padding-top:1em;
-        color: #0066bb;
-        font-weight: normal;
-        font-size:1.2em;
-        border-bottom: 1px solid #bbbbbb;
+  color: #0066bb;
+  font-weight: normal;
+  font-size:1.2em;
+  margin:0em;
 }
 .content {
-         padding-top:1em;
-         float:top;
-         width:70%;
- }
+  padding: 1em 0 1em 0;
+  float:top;
+  width:74%;
+}
+.box {
+  margin: 1em 0 1em 0;
+  padding: 1em 0 1em 0;
+}
+.subbox {
+  padding-top: 0.5em;
+  border: 0em;
+  margin: 0em;
+}
+.table {
+  border: 1px solid #bbbbbb;
+}
+.date {
+  margin: 0em;
+  width: 4em;
+  display: inline-block;
+  color:#0066bb;
+  font-weight: normal;
+}
+.menu {
+  margin: 0em;
+  padding-bottom: 0em;
+  margin-top:auto;
+  margin-bottom:auto;
+  float: left;
+  padding-top:0.75em;
+}
+.title {
+  font-size:2em;
+  padding-right:1.5em;
+  margin-right:1em;
+  border-right:1px solid #bbbbbb;
+  float: left;
+  font-weight: normal;
+}
+.menu a {
+  border: 1px solid #bbbbbb;
+  border-radius: 2em;
+  padding:0.75em;
+}
+.menu a:hover {
+  background-color: rgba(175,175,175,0.25);
+  border: 1px solid #aaaaaa;
+}
+.paper-title {
+  color: #0066bb;
+  font-style: italic;
+  font-size: 1.1em;
+  display:block;
+  font-weight:normal;
+}
 </style>
 <meta name="google-site-verification" content="eCnle1KS8GJxHrelOFtykEig1gZ8g_188Iqr-GLIer0" />
 </head>
 <body>
 <div class = "header">
-<center>
-        <h1> Lauren Pick </h1>
-</center>
+        <div class = "title"> Lauren Pick</div>
+        <div class  = "menu"><a href= "cv.pdf">CV</a></div>
 </div>
 <div class = "content">
-        I am a postdoctoral researcher co-mentored by <a href="https://people.eecs.berkeley.edu/~sseshia/">Prof. Sanjit Seshia</a>
+    <div class = "box">
+        I am a <a href = "https://cifellows2021.org/">CI postdoctoral fellow</a> co-mentored by <a href="https://people.eecs.berkeley.edu/~sseshia/">Prof. Sanjit Seshia</a>
         and <a href ="https://pages.cs.wisc.edu/~aws/">Prof. Aws Albarghouthi</a>.
-        Previously, I was a PhD student at Princeton University
+        Previously, I was a PhD student in Princeton University's Computer Science department
         advised by <a href = "http://www.cs.princeton.edu/~aartig/">Prof. Aarti Gupta</a>.
-        <br />
-        My CV can be found <a href = "cv.pdf">here</a>.
-        <h2> News </h2>
-        <ul>
-                <li>11/02/2021: FPO Complete!</li>
-                <li>07/15/2021: Received <a href = "https://cifellows2021.org/">CIFellows Postdoctoral Fellowship</a> to work with <a href ="https://pages.cs.wisc.edu/~aws/">Prof. Aws Albarghouthi</a> at UW-Madison.</li>
-        </ul>
-        <h2> Research Interests</h2>
-        I am broadly interested in topics related to automated software verification and synthesis, with specific interests in the following:
-        <ul>
-                <li>Invariant synthesis and specification inference</li>
-                <li>Relational verification</li>
-                <li>Modular verification</li>
-                <li>CHC-based verification techniques</li>
-        </ul>
-        <h2>Publications</h2>
-        <p><i>Scaling Automatic Modular Verification.</i> Lauren Pick. 2021.
-        <a href="thesis.pdf" class = "button">thesis</a>
-        <a href="fpo_slides.pdf" class = "button">slides</a></p>
-        <p><i>Unbounded Procedure Summaries from Bounded Environments.</i> Lauren Pick, Grigory Fedyukovich, Aarti Gupta. VMCAI'21.
-        <a href="https://www.cs.princeton.edu/~aartig/papers/clover-vmcai21-extended.pdf" class = "button" >paper</a></p>
-        <p><i>Automating Modular Verification of Secure Information Flow.</i> Lauren Pick, Grigory Fedyukovich, Aarti Gupta. FMCAD'20.
-        <a href="https://repositum.tuwien.at/bitstream/20.500.12708/15519/1/23_Automating%20Modular%20Verification%20of%20Secure%20Information%20Flow.pdf" class = "button" >paper</a>
-        <a href="https://www.youtube.com/watch?v=G9n8pQaYcuo" class = "button">talk</a></p>
-        <p><i>Exploiting Synchrony and Symmetry in Relational Verification.</i> Lauren Pick, Grigory Fedyukovich, Aarti Gupta. CAV'18.
-        <a href="https://link.springer.com/content/pdf/10.1007%2F978-3-319-96145-3_9.pdf" class = "button" >paper</a>
-        <a href="https://www.cs.princeton.edu/~aartig/papers/synonym-cav18.pdf" class = "button" >extended version</a>
-        <a href="https://easychair.org/smart-slide/slide/FKpx#" class = "button">slides</a>
-        <a href ="https://github.com/lmpick/synonym" class = "button" >code</a></p>
-</div>
+
+      <div class="subbox">
+      I am broadly interested in the application of automated verification and synthesis techniques in different domains. In practice, straightforward application of these techniques faces scalability limitations, requiring new domain-specific representations and algorithmic approaches.
+      </div>
+    </div>
+    <div class = "box">
+    <h2> News </h2>
+      <ul>
+        <li>
+          <span class="date">Sep 22</span> Benchmark paper accepted to NeurIPS </li>
+        </li>
+        <li>
+          <span class="date">Aug 22</span> "Qubit mapping and routing via MaxSAT" accepted to MICRO
+        </li>
+        <li>
+          <span class="date">Nov 21</span> FPO ("thesis defense") complete!
+        </li>
+        <li>
+          <span class="date">Jul 21</span> Received <a href = "https://cifellows2021.org/">CIFellowship</a> to work with <a href ="https://pages.cs.wisc.edu/~aws/">Prof. Aws Albarghouthi</a> at UW-Madison
+        </li>
+      </ul>
+    </div>
+    <div class = "box">
+      <h2>Publications</h2>
+      <ul>
+        <li><span class="paper-title">AutoWS-Bench-101: Benchmarking Automated Weak Supervision with 100 Labels.</span><span class="authors">
+              Nicholas Carl Roberts, Xintong Li, Tzu-Heng Huang, Dyah Adila, Spencer Schoenberg, Cheng-Yu Liu, Lauren Pick, Haotian Ma, Aws Albarghouthi, Frederic Sala.</span>
+            <span class="conf">NeurIPS 2022.</span>
+            <div class="buttons">
+              <a href="https://arxiv.org/pdf/2208.14362.pdf" class="button">paper</a>
+            </div>
+        </li>
+        <li><span class="paper-title">Qubit Mapping and Routing via MaxSAT.</span>
+            <span class="authors">
+            Abtin Molavi, Amanda Xu, Martin Diges, Lauren Pick, Swamit S. Tannu, Aws Albarghouthi.
+            </span>
+            <span class="conf">
+            MICRO 2022. 
+            </span>
+            <div class="buttons">
+              <a href="https://arxiv.org/pdf/2208.13679.pdf" class="button">paper</a>
+            </div>
+        </li>
+        <li><span class="paper-title">Scaling Automatic Modular Verification.</span>
+            <span class="authors">Lauren Pick.</span>
+            <span class="conf">2021.</span>
+            <div class="buttons">
+              <a href="thesis.pdf" class = "button">thesis</a>
+              <a href="fpo_slides.pdf" class = "button">slides</a>
+            </div>
+        </li>
+        <li><span class="paper-title">Unbounded Procedure Summaries from Bounded Environments.</span>
+            <span class="authors">Lauren Pick, Grigory Fedyukovich, Aarti Gupta.</authors>
+            <span class="conf">VMCAI 2021.</span>
+            <div class="buttons">
+              <a href="https://www.cs.princeton.edu/~aartig/papers/clover-vmcai21-extended.pdf" class = "button" >paper</a>
+            </div>
+        </li>
+        <li><span class="paper-title">Automating Modular Verification of Secure Information Flow.</span>
+            <span class="authors">
+            Lauren Pick, Grigory Fedyukovich, Aarti Gupta.
+            </span>
+            <span class="conf">
+            FMCAD 2020.
+            </span>
+            <div class="buttons">
+            <a href="https://repositum.tuwien.at/bitstream/20.500.12708/15519/1/23_Automating%20Modular%20Verification%20of%20Secure%20Information%20Flow.pdf" class = "button" >paper</a>
+            <a href="https://www.youtube.com/watch?v=G9n8pQaYcuo" class = "button">talk</a>
+            </div>
+        </li>
+        <li><span class="paper-title">Exploiting Synchrony and Symmetry in Relational Verification.</span>
+            <span class="authors">
+            Lauren Pick, Grigory Fedyukovich, Aarti Gupta.
+            </span>
+            <span class="conf">CAV 2018.</span>
+            <div class="buttons">
+              <a href="https://link.springer.com/content/pdf/10.1007%2F978-3-319-96145-3_9.pdf" class = "button" >paper</a>
+              <a href="https://www.cs.princeton.edu/~aartig/papers/synonym-cav18.pdf" class = "button" >extended version</a>
+              <a href="https://easychair.org/smart-slide/slide/FKpx#" class = "button">slides</a>
+              <a href ="https://github.com/lmpick/synonym" class = "button" >code</a>
+            </div>
+        </li>
+  </div>
 </body>
 </html>
