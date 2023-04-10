@@ -64,13 +64,33 @@ div {
 }
 ul {
   list-style: none;
+  margin-left:0em;
+  padding-left:1.5em;
 }
 li {
   border-left: 2px solid #0066bb;
   padding:0em;
-  margin-left:-0.5em;
   margin-top:0.5em;
   padding-left:0.5em;
+}
+table {
+  font-weight: 300;
+  font-size: 1em;
+  margin-left: 1.5em;
+  margin-top: 1em;
+}
+th {
+  border-left: 2px solid #0066bb;
+  padding:0em;
+  padding-left:0.5em;
+  margin-top:0.5em;
+  margin-bottom:0.5em;
+  margin: 0em;
+  width: 6em;
+  text-align: left;
+  display: inline-block;
+  color:#0066bb;
+  font-weight: 500;
 }
 p {
   width:100%;
@@ -103,16 +123,6 @@ h2 {
   padding-top: 0.5em;
   border: 0em;
   margin: 0em;
-}
-.table {
-  border: 1px solid #bbbbbb;
-}
-.date {
-  margin: 0em;
-  width: 4em;
-  display: inline-block;
-  color:#0066bb;
-  font-weight: 500;
 }
 .menu {
   margin: 0em;
@@ -167,24 +177,57 @@ h2 {
     </div>
     <div class = "box">
     <h2> News </h2>
-      <ul>
-        <li>
-          <span class="date">Sep 22</span> Benchmark paper accepted to NeurIPS </li>
-        </li>
-        <li>
-          <span class="date">Aug 22</span> "Qubit mapping and routing via MaxSAT" accepted to MICRO
-        </li>
-        <li>
-          <span class="date">Nov 21</span> FPO ("thesis defense") complete!
-        </li>
-        <li>
-          <span class="date">Jul 21</span> Received <a href = "https://cifellows2021.org/">CIFellowship</a> to work with <a href ="https://pages.cs.wisc.edu/~aws/">Prof. Aws Albarghouthi</a> at UW-Madison
-        </li>
-      </ul>
+      <table>
+        <tbody>
+          <tr>
+            <th> Apr 2023 </th>
+            <td> Psym paper and quantum circuit optimizer synthesis paper accepted to PLDI </td>
+          </tr>
+          <tr>
+            <th> Sep 2022 </th>
+            <td> Benchmark paper accepted to NeurIPS </td>
+          </tr>
+          <tr>
+            <th> Aug 2022 </th>
+            <td> "Qubit mapping and routing via MaxSAT" accepted to MICRO </td>
+          </tr>
+          <tr>
+            <th> Nov 2021 </th>
+            <td> FPO ("thesis defense") complete! </td>
+          </tr>
+          <tr>
+            <th> Jul 2021 </th>
+            <td> Received <a href = "https://cifellows2021.org/">CIFellowship</a> to work with <a href ="https://pages.cs.wisc.edu/~aws/">Prof. Aws Albarghouthi</a> at UW-Madison </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
     <div class = "box">
       <h2>Publications</h2>
       <ul>
+        <li><span class="paper-title">Psym: Efficient Symbolic Exploration of Distributed Systems.</span>
+            <span class="authors">
+            Lauren Pick, Ankush Desai, Aarti Gupta.
+            </span>
+            <span class="conf">
+            To appear at PLDI 2023. 
+            </span>
+            <div class="buttons">
+              <a href="psym-extended.pdf" class="button">extended version</a>
+              <a href="https://github.com/p-org/P/tree/master/Src/PRuntimes/PSymRuntime" class="button">code</a>
+            </div>
+        </li>
+        <li><span class="paper-title">Synthesizing Quantum-Circuit Optimizers.</span>
+            <span class="authors">
+            Amanda Xu, Abtin Molavi, Lauren Pick, Swamit S. Tannu, Aws Albarghouthi.
+            </span>
+            <span class="conf">
+            To appear at PLDI 2023. 
+            </span>
+            <div class="buttons">
+              <a href="https://arxiv.org/abs/2211.09691" class="button">paper</a>
+            </div>
+        </li>
         <li><span class="paper-title">AutoWS-Bench-101: Benchmarking Automated Weak Supervision with 100 Labels.</span><span class="authors">
               Nicholas Carl Roberts, Xintong Li, Tzu-Heng Huang, Dyah Adila, Spencer Schoenberg, Cheng-Yu Liu, Lauren Pick, Haotian Ma, Aws Albarghouthi, Frederic Sala.</span>
             <span class="conf">NeurIPS 2022.</span>
