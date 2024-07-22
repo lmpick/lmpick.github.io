@@ -4,6 +4,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 <title> Lauren Pick </title>
 <style>
 body {
@@ -13,10 +14,15 @@ body {
   background-size: cover;
   background-attachment:fixed;
   font-weight: 300;
-  padding:0px;
+  padding-left: 10%;
+  padding-right: 10%;
   margin: 0px;
   font-size: 1.1em;
   border-top: 3px solid #0066bb;
+  display:flex;
+  flex-direction:column;
+  gap: 2em;
+  justify-content:space-evenly;
 }
 a {
   text-decoration: none;
@@ -25,15 +31,34 @@ a {
 }
 a:hover{
   text-decoration: none;
-  color: #cc00bb;
+  color: #d9a676;
 }
-.header {
+.titlebar{
   color: #0066bb;
-  width: 75%;
-  min-width: 400px;
+  width: 100%;
   float: top;
   margin-bottom: 2em;
-  padding-top: 2em;
+}
+.header {
+  min-width: 400px;
+  width:100%;
+  padding-top: 1em;
+  display:flex;
+  flex-direction:column;
+}
+.intro {
+  display:flex;
+  gap:2em;
+}
+@media screen and (max-width: 850px) {
+  .intro{
+    flex-direction:column;
+  }
+}
+@media screen and (min-width: 900px) {
+  .intro{
+    flex-direction:row;
+  }
 }
 .buttons {
   padding-top:0.5em;
@@ -56,7 +81,7 @@ a:hover{
   white-space: nowrap;
 }
 .button:hover {
-  background-color: #cc00bb;
+  background-color: #d39e70;
   color: #ffffff;
 }
 div {
@@ -76,8 +101,6 @@ li {
 table {
   font-weight: 300;
   font-size: 1em;
-  margin-left: 1.5em;
-  margin-top: 1em;
 }
 th {
   border-left: 2px solid #0066bb;
@@ -108,19 +131,25 @@ h2 {
   color: #0066bb;
   font-weight: 500;
   font-size:1.2em;
-  margin:0em;
+  align-items: center;
+  display:flex;
+  gap:0.5em;
+}
+img {
+  border-radius: 50%;
 }
 .content {
-  padding: 1em 0 1em 0;
-  float:top;
-  width:74%;
+  width: 100%;
 }
 .box {
-  margin: 1em 0 1em 0;
-  padding: 1em 0 1em 0;
+  width: 100%;
+  gap: 0.5em;
+  display: flex;
+  flex-direction:column;
+  justify-content: space-evenly;
+  flex-grow:1;
 }
 .subbox {
-  padding-top: 0.5em;
   border: 0em;
   margin: 0em;
 }
@@ -129,25 +158,38 @@ h2 {
   padding-bottom: 0em;
   margin-top:auto;
   margin-bottom:auto;
-  float: left;
   padding-top:0.75em;
 }
 .title {
   font-size:2em;
-  padding-right:1.5em;
-  margin-right:1em;
-  border-right:1px solid #bbbbbb;
-  float: left;
   font-weight: 500;
 }
-.menu a {
-  border: 1px solid #bbbbbb;
-  border-radius: 2em;
-  padding:0.75em;
+.titlecard {
+  float: left;
+  display:flex;
+  flex-direction:column;
+  padding-right:1.5em;
+  margin-right:1em;
+  border-right:1px solid #b2bb9b;
 }
-.menu a:hover {
+.contact-menu {
+  display: flex;
+  font-size: 1.25em;
+  gap: 0.5em;
+}
+.contact-menu a {
+  text-decoration:none;
+  padding: 0.5em;
+  width: 1em;
+  height: 1em;
+  border: 1px solid #b2bb9b;
+  border-radius: 2em;
+  display: flex;
+  align-items: center;
+}
+.contact-menu a:hover {
   background-color: rgba(175,175,175,0.25);
-  border: 1px solid #aaaaaa;
+  border: 1px solid #b2bb9b;
 }
 .paper-title {
   color: #0066bb;
@@ -161,55 +203,32 @@ h2 {
 </head>
 <body>
 <div class = "header">
-        <div class = "title"> Lauren Pick</div>
-        <div class  = "menu"><a href= "cv.pdf">CV</a></div>
+    <div class = "titlebar">
+      <div class = "titlecard">
+        <div class = "title"> Lauren Pick </div>
+      </div>
+      <div class = "contact-menu">
+        <a href ="mailto:pick@cse.cuhk.edu.hk" id="email"><span class="material-symbols-outlined" style="font-size:1em">mail</span></a>
+        <a href= "cv.pdf"><span style="font-size:0.75em">CV</span></a>
+      </div>
+    </div>
+    <div class = "intro">
+       <div class = "box">
+        <div class="subbox">
+    I work on automated techniques for formally reasoning about programs. I am interested in (a) applying these techniques to help people understand and correctly interact with existing software components and (b) figuring out how to scale these techniques so that they can be usefully applied to real systems.
+More specific recent interests are in <i>applications of static analysis and synthesis to LLM interpretability</i> and <i>automated reasoning about concurrent and distributed systems</i>. <br /><br />
+           I will be joining the department of Computer Science and Engineering at the Chinese University of Hong Kong (<a href="https://www.cse.cuhk.edu.hk/">CSE@CUHK</a>) in the fall.
+          <b>
+            I am currently looking for students! Please reach out via email if you are interested in working with me.
+          </b>
+        </div>
+      </div>
+    </div>
 </div>
-<div class = "content">
-    <div class = "box">
-        I am a <a href = "https://cifellows2021.org/">CI postdoctoral fellow</a> co-mentored by <a href="https://people.eecs.berkeley.edu/~sseshia/">Prof. Sanjit Seshia</a>
-        and <a href ="https://pages.cs.wisc.edu/~aws/">Prof. Aws Albarghouthi</a>.
-        Previously, I was a PhD student in Princeton University's Computer Science department
-        advised by <a href = "http://www.cs.princeton.edu/~aartig/">Prof. Aarti Gupta</a>.
-
-      <div class="subbox">
-        <b>
-        I am currently on the academic job market! I have made my <a href = "research.pdf">research</a>, <a href = "teaching.pdf">teaching</a>, and <a href = "diversity.pdf">diversity</a> statements available.
-        </b>
-      </div>
-
-      <div class="subbox">
-      I am broadly interested in the application of automated verification and synthesis techniques in different domains. In practice, the straightforward application of these kinds of tools and techniques faces scalability and expressivity limitations. I address these limitations by developing new representations and algorithmic approaches that take advantage of the structure of the systems and properties under consideration.
-      </div>
+<div class = "content" style="display:table">
+    <div>
     </div>
-    <div class = "box">
-    <h2> News </h2>
-      <table>
-        <tbody>
-          <tr>
-            <th> Apr 2023 </th>
-            <td> Psym paper and quantum circuit optimizer synthesis paper accepted to PLDI </td>
-          </tr>
-          <tr>
-            <th> Sep 2022 </th>
-            <td> Benchmark paper accepted to NeurIPS </td>
-          </tr>
-          <tr>
-            <th> Aug 2022 </th>
-            <td> "Qubit mapping and routing via MaxSAT" accepted to MICRO </td>
-          </tr>
-          <tr>
-            <th> Nov 2021 </th>
-            <td> FPO ("thesis defense") complete! </td>
-          </tr>
-          <tr>
-            <th> Jul 2021 </th>
-            <td> Received <a href = "https://cifellows2021.org/">CIFellowship</a> to work with <a href ="https://pages.cs.wisc.edu/~aws/">Prof. Aws Albarghouthi</a> at UW-Madison </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class = "box">
-      <h2>Publications</h2>
+    <h2><span class="material-symbols-outlined" style="font-size:1.25em">article</span> Publications</h2>
       <ul>
         <li><span class="paper-title">Psym: Efficient Symbolic Exploration of Distributed Systems.</span>
             <span class="authors">
@@ -219,7 +238,7 @@ h2 {
             PLDI 2023. 
             </span>
             <div class="buttons">
-              <a href="psym-extended.pdf" class="button">paper</a>
+              <a href="https://dl.acm.org/doi/pdf/10.1145/3591247" class="button">paper</a>
               <a href="psym-extended.pdf" class="button">extended version</a>
               <a href="https://youtu.be/FXkSMC-kUE8?t=3575", class = "button">talk</a>
               <a href="https://github.com/p-org/P/tree/master/Src/PRuntimes/PSymRuntime" class="button">code</a>
@@ -292,7 +311,6 @@ h2 {
               <a href="https://easychair.org/smart-slide/slide/FKpx#" class = "button">slides</a>
               <a href ="https://github.com/lmpick/synonym" class = "button" >code</a>
             </div>
-        </li>
-  </div>
+      </li>
 </body>
 </html>
